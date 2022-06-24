@@ -4,7 +4,8 @@ fetch('https://www.googleapis.com/books/v1/volumes?q=HTML5')
 
 function handleResponse(obj) {
     obj.items.forEach((item, index) => {
-        if (index > 7) return; // returns 8 elements from array
+        if (index > 9)
+        return;
         let div = document.createElement('div');
         div.className = 'books';
         div.innerHTML = `<img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" alt="${item.singleTitle} by ${item.volumeInfo.authors[0]}" />
@@ -17,5 +18,20 @@ function handleResponse(obj) {
 
         let container = document.querySelector('.booklist-cards');
         container.append(div);
+
+        if (index < 8)
+        return;
+        let featured = document.createElement('featured');
+        featured.className = 'featured';
+        featured.innerHTML = `<img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" alt="${item.singleTitle} by ${item.volumeInfo.authors[0]}" />
+            <h4>${item.volumeInfo.title}</h1>
+            <p><strong>${item.volumeInfo.authors}</strong></p>
+            <h8>${item.volumeInfo.description}</h8>
+            <br>
+            <br>
+            <h8>Pages:  ${item.volumeInfo.pageCount}</h8>`
+
+        let section = document.querySelector('.booklist-featured');
+        section.append(featured);
     })
 }
