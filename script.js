@@ -4,7 +4,7 @@ fetch('https://www.googleapis.com/books/v1/volumes?q=HTML5')
 
 function handleResponse(obj) {
     obj.items.forEach((item, index) => {
-        if (index > 5) return; // limit 6 result
+        if (index > 7) return; // returns 8 elements from array
         let div = document.createElement('div');
         div.className = 'books';
         div.innerHTML = `<img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" alt="${item.singleTitle} by ${item.volumeInfo.authors[0]}" />
