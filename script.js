@@ -28,20 +28,3 @@ function renderItemHtml(item) {
     <h8>Pages:  ${item.volumeInfo.pageCount}</h8>
     </div></button>`
 }
-
-let options = document.querySelectorAll('.option');
-
-let i;
-function unselectAll() {
-    for (i = 0; i < options.length; i++) {
-        options[i].style.backgroundColor = "black";
-    }
-}
-
-// loop through the options and add the event listener to each element
-options.forEach(option => {
-   option.addEventListener('click', function(){
-      unselectAll();
-      this.style.backgroundColor = "black";  
-   } );
-});
