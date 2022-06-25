@@ -17,7 +17,7 @@ function renderListHtml(items) {
 
 // injects elements into html 
 function renderItemHtml(item) {
-    return `<button><div class="book"><img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" 
+    return `<button><div class="option"><img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" 
     alt="${item.singleTitle} by ${item.volumeInfo.authors[0]}" />
     <div>
     <h4>${item.volumeInfo.title}</h4>
@@ -28,3 +28,21 @@ function renderItemHtml(item) {
     <h8>Pages:  ${item.volumeInfo.pageCount}</h8>
     </div></button>`
 }
+
+let options = document.querySelectorAll('.option');
+
+let i;
+function unselectAll() {
+    for (i = 0; i < options.length; i++) {
+        options[i].style.backgroundColor = "";
+    }
+}
+
+// loop through the options and add the event listener to each element
+options.forEach(option => {
+    option.addEventListener('click', function () {
+        unselectAll();
+        this.style.backgroundColor = "white";
+        this.style.color = "black";
+    });
+});
