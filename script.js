@@ -4,7 +4,7 @@ fetch('https://www.googleapis.com/books/v1/volumes?q=HTML5')
 
 function handleResponse(obj) {
     obj.items.forEach((item, index) => {
-        if (index > 9)
+        if (index > 7)
         return;
         let div = document.createElement('div');
         div.className = 'books';
@@ -19,7 +19,7 @@ function handleResponse(obj) {
         let container = document.querySelector('.booklist-cards');
         container.append(div);
 
-        if (index < 8)
+        if (index < 6)
         return;
         let featured = document.createElement('featured');
         featured.className = 'featured';
