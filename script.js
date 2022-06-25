@@ -17,7 +17,7 @@ function renderListHtml(items) {
 
 // injects elements into html 
 function renderItemHtml(item) {
-    return `<button><div class="book flex-child"><img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" 
+    return `<button><div class="book"><img src="${item.volumeInfo.imageLinks.thumbnail}" class="thumbnails" 
     alt="${item.singleTitle} by ${item.volumeInfo.authors[0]}" />
     <div>
     <h4>${item.volumeInfo.title}</h4>

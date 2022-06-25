@@ -76,12 +76,9 @@ button:focus {
         height: fit-content;
         border: 3px solid black;
         width: 45%;
-        top: 12%;
     }
 
     .other-books {
-        position: inherit;
-        height: fit-content;
         border: 3px solid black;
         width: 50%;
     }

@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/e48c33a78b.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- title/logo -->
     <div class="container">
@@ -26,7 +26,7 @@
     </div>
 
     <!-- navbar  -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-sm bg-light">
         <div class="container-fluid justify-content-center">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,21 +53,22 @@
             </div>
         </div>
     </nav>
-
-    <!-- featured books  -->
-    <div class="featured-books">
-        <div>
+    <div>
+        <!-- featured books  -->
+        <div class="featured-books">
             <div>
-                <h1>Featured Books</h1>
-                <hr>
+                <div>
+                    <h1>Featured Books</h1>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- standard books  -->
-    <div>
-        <div class="other-books">
+        <!-- standard books  -->
+        <div>
+            <div class="other-books">
 
+            </div>
         </div>
     </div>
 
@@ -76,16 +77,19 @@
         <div>
             <ul class="socials">
                 <li>
-                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
                 </li>
                 <li>
-                    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
-                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"
+                        aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram"></i></a>
                 </li>
             </ul>
-          </div>
+        </div>
     </footer>
 
     <script src="//www.googleapis.com/books/v1/volumes?q=HTML5&callback=handleResponse" async></script>
